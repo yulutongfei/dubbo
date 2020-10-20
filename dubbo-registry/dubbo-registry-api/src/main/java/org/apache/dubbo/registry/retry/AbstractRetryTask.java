@@ -111,6 +111,7 @@ public abstract class AbstractRetryTask implements TimerTask {
         if (timeout.isCancelled() || timeout.timer().isStop() || isCancel()) {
             // other thread cancel this timeout or stop the timer.
             return;
+
         }
         if (times > retryTimes) {
             // reach the most times of retry.
